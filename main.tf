@@ -10,7 +10,7 @@ terraform {
 # Configure the AWS Provider
 provider "aws" {
   region = "us-east-1"
-#  profile    = "personal"
+  #  profile    = "personal"
 }
 resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/16"
@@ -89,5 +89,5 @@ resource "aws_security_group" "default" {
   tags = {
     Name = "default-sg"
     IAC  = "tf-gth"
-    }  # <-- Agregar esta llave de cierre
+  } # <-- Agregar esta llave de cierre
 }
