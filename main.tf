@@ -17,7 +17,7 @@ resource "aws_vpc" "main" {
 
   tags = {
     Name = "main-vpc"
-    IAC  = "tf-gth"
+    IAC  = "tf-gth2"
   }
 }
 
@@ -29,7 +29,7 @@ resource "aws_subnet" "public" {
 
   tags = {
     Name = "public-subnet-${count.index + 1}"
-    IAC  = "tf-gth"
+    IAC  = "tf-gth2"
   }
 }
 
@@ -38,7 +38,7 @@ resource "aws_internet_gateway" "main" {
 
   tags = {
     Name = "main-igw"
-    IAC  = "tf-gth"
+    IAC  = "tf-gth22"
   }
 }
 
@@ -52,7 +52,7 @@ resource "aws_route_table" "public" {
 
   tags = {
     Name = "public-rt"
-    IAC  = "tf-gth"
+    IAC  = "tf-gth22"
   }
 }
 
@@ -88,6 +88,6 @@ resource "aws_security_group" "default" {
 
   tags = {
     Name = "default-sg"
-    IAC  = "tf-gth"
+    IAC  = "tf-gth22"
   } # <-- Agregar esta llave de cierre
 }
